@@ -135,7 +135,6 @@ export default function EditTaskModal({ task, onSave, onClose }) {
       title,
       description,
       dueDate,
-      priority,
     });
   }
 
