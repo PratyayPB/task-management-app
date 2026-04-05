@@ -50,8 +50,8 @@ function LandingPage() {
           : [];
 
       setTasks(rawTasks.map(normalizeTask));
-    } catch (error) {
-      console.error("Failed to fetch tasks:", error);
+    } catch {
+      console.error("Failed to fetch tasks:");
       setLoadError("Unable to load tasks right now.");
       setTasks([]);
     } finally {

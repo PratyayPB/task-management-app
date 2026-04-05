@@ -124,7 +124,6 @@ export default function EditTaskModal({ task, onSave, onClose }) {
   const [title, setTitle] = useState(task?.title || "");
   const [description, setDescription] = useState(task?.description || "");
   const [dueDate, setDueDate] = useState(task?.dueDate || "");
-  const [priority, setPriority] = useState("High");
 
   const open = Boolean(task);
   if (!open) return null;
@@ -292,51 +291,20 @@ export default function EditTaskModal({ task, onSave, onClose }) {
                 />
               </div>
 
-              {/* Due Date + Priority */}
-              <div className="grid grid-cols-2 gap-5">
-                {/* Due Date */}
-                <div className="space-y-1.5">
-                  <label className="mono flex items-center gap-1.5 text-[10px] font-medium uppercase tracking-widest text-slate-400">
-                    <CalIcon /> Due Date
-                  </label>
-                  <input
-                    type="date"
-                    value={dueDate}
-                    onChange={(e) => setDueDate(e.target.value)}
-                    className="w-full rounded-xl px-3 py-2.5 text-sm text-slate-600 border-none focus:outline-none focus:ring-2 cursor-pointer"
-                    style={{ background: "#f0f4f7", focusRingColor: "#4d44e3" }}
-                  />
-                </div>
+              {/* Due Date */}
 
-                {/* Priority Chips */}
-                <div className="space-y-1.5">
-                  <label className="mono block text-[10px] font-medium uppercase tracking-widest text-slate-400">
-                    Priority
-                  </label>
-                  <div className="flex gap-2 items-center pt-1">
-                    {["High", "Medium", "Low"].map((p) => {
-                      const active = priority === p;
-                      return (
-                        <button
-                          key={p}
-                          type="button"
-                          onClick={() => setPriority(p)}
-                          className="chip px-3 py-1.5 rounded-lg text-xs font-bold tracking-tight"
-                          style={
-                            active
-                              ? {
-                                  background: "rgba(77,68,227,0.12)",
-                                  color: "#4d44e3",
-                                }
-                              : { background: "#f0f4f7", color: "#8896a0" }
-                          }
-                        >
-                          {p}
-                        </button>
-                      );
-                    })}
-                  </div>
-                </div>
+              {/* Due Date */}
+              <div className="space-y-1.5">
+                <label className="mono flex items-center gap-1.5 text-[10px] font-medium uppercase tracking-widest text-slate-400">
+                  <CalIcon /> Due Date
+                </label>
+                <input
+                  type="date"
+                  value={dueDate}
+                  onChange={(e) => setDueDate(e.target.value)}
+                  className="w-full rounded-xl px-3 py-2.5 text-sm text-slate-600 border-none focus:outline-none focus:ring-2 cursor-pointer"
+                  style={{ background: "#f0f4f7", focusRingColor: "#4d44e3" }}
+                />
               </div>
 
               {/* Divider */}

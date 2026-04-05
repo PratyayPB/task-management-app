@@ -18,6 +18,7 @@ function TaskCreateForm({
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   async function handleSubmit(e) {
+    e.preventDefault();
     if (!isAuthenticated) {
       window.alert("You must be signed in to create a task.");
       return;
