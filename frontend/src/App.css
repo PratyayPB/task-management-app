@@ -1,0 +1,56 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800;1,9..40,400&family=DM+Mono:wght@400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700;9..40,800&family=DM+Mono:wght@400;500&display=swap");
+* {
+  font-family: "DM Sans", sans-serif;
+}
+.mono {
+  font-family: "DM Mono", monospace;
+}
+.modal-enter {
+  animation: modalIn 0.25s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+@keyframes modalIn {
+  from {
+    opacity: 0;
+    transform: scale(0.96) translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+.btn-primary {
+  transition: all 0.15s ease;
+}
+.btn-primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 25px rgba(77, 68, 227, 0.35);
+}
+.btn-primary:active {
+  transform: scale(0.97);
+}
+.btn-secondary:active {
+  transform: scale(0.97);
+}
+.nav-pill {
+  transition: all 0.2s ease;
+}
+.nav-pill:hover {
+  transform: scale(1.08);
+}
+.nav-pill:active {
+  transform: scale(0.92);
+}
+.field-input:focus {
+  background: rgba(241, 245, 249, 0.8);
+  outline: none;
+}
+.chip {
+  transition: all 0.15s ease;
+}
+.chip:hover {
+  transform: scale(1.04);
+}
+.chip:active {
+  transform: scale(0.96);
+}
